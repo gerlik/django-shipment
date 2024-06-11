@@ -1,0 +1,15 @@
+version: '3.8'
+
+# Add database for now, later can add front and backend also into containers
+services:
+  db:
+    image: postgres:13
+    container_name: shipment_db
+    environment:
+      POSTGRES_DB: shipment_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
