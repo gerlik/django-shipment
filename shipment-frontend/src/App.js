@@ -1,5 +1,6 @@
 import Login from "./login/Login";
 import {useState} from "react";
+import {Shipments} from "./shipments/Shipments";
 
 function App() {
     const [token, setToken] = useState(localStorage.getItem('token'));
@@ -10,7 +11,7 @@ function App() {
                 {!token ?
                     <Login setToken={setToken}/>
                     :
-                    <div>TODO shipments page</div>
+                    <Shipments token={token}/>
                 }
             </div>
         </div>

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
-import {obtainToken} from "./Service";
+import {obtainToken} from "../Service";
 
 const Login = ({setToken}) => {
     const [username, setUsername] = useState('');

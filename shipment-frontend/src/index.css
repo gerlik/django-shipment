@@ -25,3 +25,7 @@ code {
 .login-form {
     text-align: center;
 }
+
+label.form-label {
+    margin-top: 10px;
+}
