@@ -10,10 +10,18 @@ A simple django REST API using Python, React, PostgreSQL and Docker.
 
 ## Instructions for local environment
 
-1. Run ``docker-compose up --build``
-2. Run ``python manage.py runserver``
-3. In ``shipment-frontent`` run ``npm install``
-4. In ``shipment-backent`` run ``npm start``
+### Setup
+
+First 3 commands are neccessary only on setup
+
+1. Create the container ``docker-compose up --build``
+2. Create admin ``python manage.py createsuperuser``
+3. In ``shipment-frontend`` folder run ``npm install``
+
+### Run
+
+4. Run ``python manage.py runserver``
+5. In ``shipment-backend`` run ``npm start``
 
 ## Result
 
