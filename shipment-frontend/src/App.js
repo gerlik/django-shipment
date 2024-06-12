@@ -1,9 +1,18 @@
-import './App.css';
+import Login from "./login/Login";
+import {useState} from "react";
 
 function App() {
+    const [token, setToken] = useState(localStorage.getItem('token'));
+
     return (
         <div className="App">
-            <p>TODO frontend</p>
+            <div className="container">
+                {!token ?
+                    <Login setToken={setToken}/>
+                    :
+                    <div>TODO shipments page</div>
+                }
+            </div>
         </div>
     );
 }
