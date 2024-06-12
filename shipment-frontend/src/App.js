@@ -1,20 +1,26 @@
 import Login from "./login/Login";
 import {useState} from "react";
 import {Shipments} from "./shipments/Shipments";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {ShipmentDetails} from "./shipments/ShipmentDetails";
+
 
 function App() {
     const [token, setToken] = useState(localStorage.getItem('token'));
 
     return (
-        <div className="App">
-            <div className="container">
-                {!token ?
+        <Router>
+            <div className="App">
+                {!token ? (
                     <Login setToken={setToken}/>
-                    :
-                    <Shipments token={token}/>
-                }
+                ) : (
+                    <Routes>
+                        <Route path="/shipment/:id" element={<ShipmentDetails token={token}/>}/>
+                        <Route path="/" element={<Shipments token={token}/>}/>
+                    </Routes>
+                )}
             </div>
-        </div>
+        </Router>
     );
 }
 

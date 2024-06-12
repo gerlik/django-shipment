@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Badge, Button, Container, Form, Table} from "react-bootstrap";
-import {createShipment, deleteShipment, getShipments, updateShipment} from "../Service";
+import {createShipment, deleteShipment, getShipments} from "../Service";
+import {Link} from "react-router-dom";
 
 export const Shipments = ({token}) => {
     const [shipments, setShipments] = useState([]);
@@ -46,16 +47,6 @@ export const Shipments = ({token}) => {
             } else {
                 setError(`Error creating shipment: ${error.message}`);
             }
-        }
-    };
-
-    const handleUpdate = async (id) => {
-        try {
-            await updateShipment(id, newShipment, token);
-            fetchShipments();
-        } catch (error) {
-            console.error(error)
-            setError(`Error updating shipments: ${error}`)
         }
     };
 
@@ -150,16 +141,12 @@ export const Shipments = ({token}) => {
                         <tbody>
                         {shipments.map(shipment => (
                             <tr key={shipment.id}>
-                                <td>{shipment.tracking_number}</td>
+                                <td><Link to={`/shipment/${shipment.id}`}>{shipment.tracking_number}</Link></td>
                                 <td>{shipment.origin}</td>
                                 <td>{shipment.destination}</td>
                                 <td><Badge bg={"primary"}>{shipment.status}</Badge></td>
                                 <td>{shipment.estimated_delivery}</td>
                                 <td>
-                                    <Button variant="warning" onClick={() => handleUpdate(shipment.id)}
-                                            className={"me-2"}>
-                                        Update
-                                    </Button>
                                     <Button variant="danger" onClick={() => handleDelete(shipment.id)}>
                                         Delete
                                     </Button>
