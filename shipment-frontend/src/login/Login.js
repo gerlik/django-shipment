@@ -1,5 +1,10 @@
 import {useState} from "react";
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
 import {obtainToken} from "../Service";
 
 const Login = ({setToken}) => {

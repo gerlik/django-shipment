@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {Container, Button, Form} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import {useParams} from 'react-router-dom';
 import {updateShipment} from "../Service";
 
