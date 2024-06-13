@@ -6,7 +6,8 @@ A simple django REST API using Python, React, PostgreSQL and Docker.
 
 1. Git
 2. At least Python 3.9
-3. Docker
+3. Node version 22
+4. Docker
 
 ## Instructions for local environment
 
@@ -23,6 +24,11 @@ First 3 commands are necessary only on setup
 
 5. Run ``python manage.py runserver``
 6. In ``shipment-frontend`` run ``npm start``
+
+## Run tests
+
+1. Backend: Run ``pytest``
+2. Frontend: In ``shipment-frontend`` run ``npm test``
 
 ## Result
 
