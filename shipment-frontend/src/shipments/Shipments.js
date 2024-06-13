@@ -147,7 +147,7 @@ export const Shipments = ({token}) => {
                                 <td><Badge bg={"primary"}>{shipment.status}</Badge></td>
                                 <td>{shipment.estimated_delivery}</td>
                                 <td>
-                                    <Button variant="danger" onClick={() => handleDelete(shipment.id)}>
+                                    <Button variant="danger" onClick={() => handleDelete(shipment.id)} size={"sm"}>
                                         Delete
                                     </Button>
                                 </td>

@@ -22,8 +22,11 @@ First 3 commands are necessary only on setup
 ### Run
 
 5. Run ``python manage.py runserver``
-6. In ``shipment-backend`` run ``npm start``
+6. In ``shipment-frontend`` run ``npm start``
 
 ## Result
 
+Log in with created admin user
+
 * Application will be accessible at ``http://localhost:3000/``
+* Backend will be accessible at ``http://localhost:8000/
