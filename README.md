@@ -1,13 +1,15 @@
 # django-shipment
 
-A simple django REST API using Python, React, PostgreSQL and Docker.
+A simple django REST API application using Python, React, PostgreSQL and Docker.
 
 ## Prerequisites
+
+Stack I used
 
 1. Git
 2. At least Python 3.9
 3. Node version 22
-4. Docker
+4. Docker 26.0.0
 
 ## Instructions for local environment
 
@@ -35,7 +37,7 @@ First 3 commands are necessary only on setup
 Log in with created admin user
 
 * Application will be accessible at http://localhost:3000/
-* Backend will be accessible at http://localhost:8000/
+* Backend will be accessible at http://localhost:8000/admin/
 
 ![Shipment list](image-1.png "Shipment list")
 ![Shipment details](image-2.png "Shipment details")
