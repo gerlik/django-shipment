@@ -34,5 +34,9 @@ First 3 commands are necessary only on setup
 
 Log in with created admin user
 
-* Application will be accessible at ``http://localhost:3000/``
-* Backend will be accessible at ``http://localhost:8000/
+* Application will be accessible at http://localhost:3000/
+* Backend will be accessible at http://localhost:8000/
+
+![Shipment list](image-1.png "Shipment list")
+![Shipment details](image-2.png "Shipment details")
+![Sign-in](image-3.png "Sign-in")
