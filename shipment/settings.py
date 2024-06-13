@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'shipment_db',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'test',  # too lazy to create .env today
         'HOST': 'localhost',
         'PORT': '5432',
     }
