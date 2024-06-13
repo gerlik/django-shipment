@@ -3,7 +3,7 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import Table from "react-bootstrap/Container";
+import Table from "react-bootstrap/Table";
 import {createShipment, deleteShipment, getShipments} from "../Service";
 import {Link} from "react-router-dom";
 
